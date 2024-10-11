@@ -5,12 +5,12 @@ import com.lalit.utils.Utils;
 public class CeilingOfNumber {
     public static void main(String[] args) {
         int[] nums = {1, 3, 5, 6}; // Sorted array
-        int target = 5;            // Target value to find the ceiling for
+        int target = 4;            // Target value to find the ceiling for
         int expectedOutput = 5;    // Expected ceiling value
 
         // Calculate the ceiling value and validate the output
         int output = ceilingOfNumber(nums, target);
-        Utils.validateOutPut(expectedOutput, output);
+        Utils.validateOutput(expectedOutput, output);
     }
 
     /**
@@ -22,6 +22,12 @@ public class CeilingOfNumber {
      * @return The ceiling value or -1 if no such value exists.
      */
     public static int ceilingOfNumber(int[] nums, int target) {
+
+        // Handle empty array or edge case if target is less that smallest number
+        if (nums.length == 0 || nums[nums.length - 1] < target) {
+            return -1;
+        }
+
         int left = 0;                     // Start of the search range
         int right = nums.length - 1;      // End of the search range
 
@@ -44,6 +50,6 @@ public class CeilingOfNumber {
         }
 
         // If array is empty or target if greater than maximum value
-        return left < nums.length ? nums[left] : -1;
+        return nums[left];
     }
 }

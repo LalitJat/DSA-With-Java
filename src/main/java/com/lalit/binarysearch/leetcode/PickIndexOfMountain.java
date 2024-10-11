@@ -6,16 +6,6 @@ package com.lalit.binarysearch.leetcode;
  * @see <a href="https://leetcode.com/problems/peak-index-in-a-mountain-array">Problem Description</a>
  */
 public class PickIndexOfMountain {
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        int[] arr = {0, 10, 5, 2};
-        int index = solution.peakIndexInMountainArray(arr);
-        System.out.println("Peak index : " + index);
-    }
-}
-
-class Solution {
     public int peakIndexInMountainArray(int[] arr) {
         int left = 0;
         int right = arr.length - 1;

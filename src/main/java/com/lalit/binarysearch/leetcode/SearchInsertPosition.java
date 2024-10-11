@@ -9,26 +9,6 @@ import com.lalit.utils.Utils;
  */
 public class SearchInsertPosition {
 
-    public static void main(String[] args) {
-        // Test cases: arrays of sorted numbers and their corresponding target values
-        int[][] nums = {
-                {1, 3, 5, 6},
-                {1, 3, 5, 6},
-                {1, 3, 5, 6},
-                {1, 3, 5, 6}
-        };
-        int[] targets = {5, 2, 7, 0};
-        int[] outputs = {2, 1, 4, 0};
-
-        // Loop through each test case
-        for (int i = 0; i < nums.length; i++) {
-            // Calculate the ceiling of the target number
-            int output = searchInsert(nums[i], targets[i]);
-            // Validate the output against the expected value
-            Utils.validateOutPut(outputs[i], output);
-        }
-    }
-
     /**
      * This method finds the index of the smallest number in the sorted array
      * that is greater than or equal to the target (ceiling).
@@ -37,7 +17,7 @@ public class SearchInsertPosition {
      * @param target The target number for which we want to find the ceiling.
      * @return The index of the ceiling number or the index where it would be inserted.
      */
-    public static int searchInsert(int[] nums, int target) {
+    public int searchInsert(int[] nums, int target) {
         int left = 0;                 // Initialize the left boundary of the search
         int right = nums.length - 1;  // Initialize the right boundary of the search
 

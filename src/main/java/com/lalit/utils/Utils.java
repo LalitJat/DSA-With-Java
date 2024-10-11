@@ -1,7 +1,7 @@
 package com.lalit.utils;
 
 public class Utils {
-    public static void validateOutPut(int actual, int expected) {
+    public static void validateOutput(int actual, int expected) {
         if (actual != expected) {
             System.err.printf("Validation failed: Expected %d but got %d.%n", expected, actual);
         } else {

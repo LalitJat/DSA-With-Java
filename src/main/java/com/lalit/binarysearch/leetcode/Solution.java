@@ -5,22 +5,29 @@ import com.lalit.utils.Utils;
 public class Solution {
     public static void main(String[] args) {
 
-        // ADD NEW ON TOP //
+        String methodName = args.length > 0 ? args[0] : "runNextGreatestLetter";
 
-        // Run next greatest letter
-//        runNextGreatestLetter();
-
-        // Run Search Insert Problem
-//        runSearchInsertPosition();
-
-        // Pick index of mountain
-//        runPickIndexOfMountain();
-
+        switch (methodName){
+            case "runNextGreatestLetter":
+                // Run next greatest letter
+                runNextGreatestLetter();
+                break;
+            case "runSearchInsertPosition":
+                // Run next greatest letter
+                runSearchInsertPosition();
+                break;
+            case "runPickIndexOfMountain":
+                // Run next greatest letter
+                runPickIndexOfMountain();
+                break;
+            default:
+                System.out.println("NO method executed");
+        }
     }
 
     private static void runNextGreatestLetter() {
         NextGreatestLetter nextGreatestLetter = new NextGreatestLetter();
-        char[] arr = {'x','x','y','y'};
+        char[] arr = {'x','x', 'x', 'y','y'};
         char target = 'z';
         char c = nextGreatestLetter.nextGreatestLetter(arr, target);
         Utils.validateOutput(c, 'x');
